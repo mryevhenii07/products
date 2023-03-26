@@ -23,21 +23,15 @@ const Header = (props: Props) => {
                 </div>
             </div></Link>
         <SearchProduct />
-
-        <div className={s.headerCart}>
-            {pathname !== "/cart" &&   <Link to="/cart" className="button button--cart">
-                <span className={s.price}>222 грн</span>
-                <div className={s.wrapPrice}>
+        <Link to="/cart" className={s.headerCart}>
+            {pathname !== "/cart" &&   <Link to="/cart" >
                     <HiOutlineShoppingCart className={s.icon} />
-                    <span className={s.countTotal}>1</span>
-                </div>
-
+<span className={s.totalCount}>1</span>
             </Link> }
-          
-        </div>
+        </Link>
     </div>
 </div>
-  )
+)
 }
 
 export default Header

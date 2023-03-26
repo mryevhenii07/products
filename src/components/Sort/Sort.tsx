@@ -13,7 +13,7 @@ const onSelected = (index:number)=> {
   setOpen(false)
 }
   return (
-    <div  className="sort">
+    <div  className={s.sort}>
     {/* <div ref={sortRef} className="sort"> */}
     <div className="sort__label">
       <svg
@@ -27,16 +27,15 @@ const onSelected = (index:number)=> {
           fill="#2C2C2C"
         />
       </svg>
-      <b>Сортування за: </b>
-      <span onClick={()=> setOpen(!open)}>{sortName}</span>
+      <b >Сортування за: </b>
+      <span style={{color:"blue"}} onClick={()=> setOpen(!open)}>{sortName}</span>
     </div>
-    {open && <div className="sort__popup"> 
-        <ul>
+    {open && <ul className={s.listSort}>
            {list.map((name,index) => 
            <li key={index} className={selected === index ? `${s.active}` : ""}onClick={()=> onSelected(index) } >{name} </li>)}
             
         </ul>
-      </div>}
+      }
       
    
   </div>

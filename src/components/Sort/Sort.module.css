@@ -1,1 +1,28 @@
-.active{color:blue}
+.sort{
+   
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.active{
+    color:blue;
+}
+
+ .listSort{
+position: absolute;
+top: 25px;
+left: 130px;
+background-color: rgb(245, 243, 243);
+cursor: pointer;
+}
+
+.listSort > li{
+    padding: 10px;
+    font-weight:500;
+}
+
+.listSort > li:hover{
+    background-color: gray;
+}
