@@ -1,0 +1,8 @@
+.wrapper{
+    /* display: grid;
+    grid-template-columns:   auto auto auto;;
+    gap: 30; */
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}

@@ -1,0 +1,24 @@
+
+
+  .categories{
+    display: flex;
+    margin-top: 20px;
+}
+.categories > li {
+    /* background-color: #f9f9f9; */
+    padding: 13px 30px;
+    border-radius: 5px 5px 0 0;
+    margin-right: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.1s ease-in-out;
+    
+}
+
+.categories > li:hover {
+    background-color: gray;
+  }
+
+  .active {
+   border-bottom: 4px solid blue;
+  }
