@@ -1,21 +1,18 @@
-import React from 'react'
+import {FC} from 'react'
 import { Link, useLocation } from 'react-router-dom';
 import {HiOutlineShoppingCart,HiOutlineUser} from 'react-icons/hi';
 
 import SearchProduct from '../SearchProduct/SearchProduct';
 import s from './Header.module.css';
 
-type Props = {}
-
-const Header = (props: Props) => {
+const Header:FC = () => {
     const {pathname} = useLocation()
 
-  return (
+return (
     <div className={s.header}>
     <div className={s.container}>
         <Link to="products">
             <div >
-
                 <div>
                     <h1>Product Store</h1>
                     <p>Смартфоны, ТВ и электроника</p>

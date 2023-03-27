@@ -1,18 +1,11 @@
-import React from 'react'
-import Categories from '../components/Categories/Categories';
+import {FC} from 'react'
 import ListProduct from '../components/ListProduct/ListProduct';
-import Sort from '../components/Sort/Sort';
 
-type Props = {}
-
-const Home = (props: Props) => {
+const Home:FC = () => {
   return (
-    <div>
-      {/* <Categories/>
-      <Sort/> */}
-        <ListProduct/>
-        
-    </div>
+    <>
+        <ListProduct />
+    </>
   )
 }
 

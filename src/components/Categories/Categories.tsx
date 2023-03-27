@@ -1,66 +1,32 @@
-import React, { useEffect, useState } from 'react'
+import  { useEffect,FC } from 'react'
+
+import {useAppDispatch,useAppSelector} from '../../hooks/hooks';
+import {categoryList,categoriesId} from '../../store/filterSlice/FilterSlice';
+import {selectCategory,selectId} from '../../store/filterSlice/selected';
 import s from './Categories.module.css';
-type Props = {
-  categoryId:string
-  onClickCategory:(value:string)=>void
-}
 
-// const categories = ["All","Smartphones","laptops","Fragrances","Skincare","Groceries","Home-decoration","hhggghghhhggghghhg"]
-
-const Categories = ({categoryId,onClickCategory}: Props) => {
-const [categories,setCategories] =useState([])
-
+const Categories:FC = () => {
+const dispatch = useAppDispatch()
+const categories = useAppSelector(selectCategory)
+const categoryId = useAppSelector(selectId)
 
 useEffect(()=>{
   fetch('https://dummyjson.com/products/categories')
 .then(res => res.json())
-.then(json => setCategories(json));
-},[])
+.then(json => dispatch(categoryList(json)));
+},[dispatch])
 
 
-  // const [activeIndex,setActiveIndex] = useState(0)
-// console.log(categoryId);
-// console.log(categories);
-
-  // const activeCategory = (index:number)=>{
-  //   setActiveIndex(index)
-  // }
   return (
     <ul className={s.categories}>
-    {categories.map((categoryName,index) => 
-  <li onClick={()=>onClickCategory(categoryName)} key={index} className={categoryId === categoryName ? `${s.active}` : ""}>
-    
-  {categoryName} </li>)}
-
+      {categories.map((categoryName:any,index:number) => 
+        <li onClick={()=> 
+            dispatch(categoriesId(categoryName))} 
+            key={index} 
+            className={categoryId === categoryName ? `${s.active}` : ""}>
+        {categoryName} </li>)}
     </ul>
   )
 }
 
 export default Categories
-// import React, { useState } from 'react'
-// import s from './Categories.module.css';
-// type Props = {
-//   categoryId:number
-// }
-
-// const categories = ["All","Smartphones","laptops","Fragrances","Skincare","Groceries","Home-decoration"]
-
-// const Categories = ({categoryId}: Props) => {
-//   const [activeIndex,setActiveIndex] = useState(0)
-// console.log(categoryId);
-
-//   const activeCategory = (index:number)=>{
-//     setActiveIndex(index)
-//   }
-//   return (
-//     <ul className={s.categories}>
-//     {categories.map((category,index) => 
-//   <li onClick={()=>activeCategory(index)} key={index} className={activeIndex === index ? `${s.active}` : ""}>
-    
-//   {category} </li>)}
-
-//     </ul>
-//   )
-// }
-
-// export default Categories

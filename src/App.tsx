@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Routes,Route } from 'react-router-dom';
 
 import './App.css';
@@ -8,11 +8,13 @@ import Cart from './pages/cart';
 import NotFound from './pages/notFound';
 
 function App() {
+ 
+  
   return (
     <div className='wrapper'>
-      <Header/>
+      <Header />
       <Routes>
-        <Route path='/products' element={<Home/>}/>
+        <Route path='/products' element={<Home />}/>
         <Route path='/cart' element={<Cart/>}/>
         <Route path='/*' element={<NotFound/>}/>
       </Routes>

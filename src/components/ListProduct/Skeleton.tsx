@@ -2,7 +2,7 @@ import React from "react"
 import ContentLoader from "react-content-loader"
 import s from '../ItemProduct/ItemProduct.module.css';
 
-const Skeleton = (props:any) => (
+const Skeleton = () => (
   <ContentLoader 
   className={s.wrapper}
     speed={3}
@@ -11,8 +11,6 @@ const Skeleton = (props:any) => (
     viewBox="0 0 335 450"
     backgroundColor="#f3eded"
     foregroundColor="#c7c6c6"
-    
-    {...props}
   >
     <rect x="0" y="209" rx="10" ry="10" width="335" height="25" /> 
     <rect x="0" y="244" rx="10" ry="10" width="335" height="35" /> 

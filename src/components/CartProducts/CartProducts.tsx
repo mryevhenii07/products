@@ -4,12 +4,6 @@ import {MdDeleteOutline,MdOutlineShoppingCart} from 'react-icons/md';
 
 import s from './CartProducts.module.css';
 import CartItem from './CartItem/CartItem';
-// import { useSelector,useDispatch } from 'react-redux'
-// import {clearItems} from '../redux/slices/cartSlice'
-// import {RootState} from '../redux/store';
-
-// import CartItem from '../components/CartItem/CartItem'
-// import CartEmpty from '../components/CartEmpty/CartEmpty'
 
 
 const Cart:React.FC = () => {  
@@ -28,27 +22,18 @@ const Cart:React.FC = () => {
     // }
     return (
         <div className={s.cart}>
-
-                    <div className={s.cartTop}>
-                        <h2 >
-                            <MdOutlineShoppingCart/>
-                            Кошик
-                        </h2>
+            <div className={s.cartTop}>
+                <h2 >
+                    <MdOutlineShoppingCart/>
+                    Кошик
+                </h2>
                         <div  className={s.cartClear}>
                         {/* <div onClick={handleClearItem} className="cart__clear"> */}
                         <MdDeleteOutline size={18}/>
                             <span >Очистити корзину</span>
                         </div>
                     </div>
-
                     <div className="content__items">
-                        <CartItem/>
-                        <CartItem/>
-                        <CartItem/>
-                        <CartItem/>
-                        <CartItem/>
-                        <CartItem/>
-                        <CartItem/>
                         <CartItem/>
                         <CartItem/>
                     {/* <div className="content__items">
@@ -58,12 +43,10 @@ const Cart:React.FC = () => {
                     <div className="cart__bottom">
                         <div className={s.cartBottomDetails}>
                             <div>
-                                {' '}
                                 Всього піц: <b>1 шт.</b>{' '}
                                 {/* Всього піц: <b>{totalCount} шт.</b>{' '} */}
                             </div>
                             <div>
-                                {' '}
                                 Сума замовлення: <b>1000 грн</b>{' '}
                                 {/* Сума замовлення: <b>{totalPrice} грн</b>{' '} */}
                             </div>
@@ -74,8 +57,6 @@ const Cart:React.FC = () => {
                         </div>
                     </div>
                 </div>
-          
-      
     )
 }
 

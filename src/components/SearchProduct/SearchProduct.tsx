@@ -1,39 +1,27 @@
-import {useEffect, useState} from 'react'
-// import HText from '../../helpers/HText';
+import {FC} from 'react'
 import { GoSearch } from 'react-icons/go';
 import { GrClose } from 'react-icons/gr';
-import {MyProduct} from '../../types/interface';
+
+import {useAppSelector,useAppDispatch} from '../../hooks/hooks';
+import {selectedValue} from '../../store/filterSlice/selected';
+import {searchValueChange} from '../../store/filterSlice/FilterSlice';
 import s from './SearchProduct.module.css';
 
-type Props = {}
+const SearchProduct:FC = () => {
+  const searchValue = useAppSelector(selectedValue)
+  const dispatch = useAppDispatch()
 
-const SearchProduct = (props: Props) => {
-
-const [products,setProducts]=useState<MyProduct[]>()
-    useEffect(()=>{
-        fetch('https://dummyjson.com/products')
-        .then(res => res.json())
-        .then(json => setProducts(json.products))
-    },[])
-    console.log(products);
- 
-    
   return (
-   
-    // <div>kk</div>
     <div className={s.root} >
-            <GoSearch className={s.icon} />
+        <GoSearch className={s.icon} />
             <input
-            // ref={inputRef} 
             className={s.input} 
-            // type="text"
-            // placeholder='Пошук піци'
-            // value={value} 
-            // onChange={handleChange} 
+            placeholder='Пошук товару'
+            value={searchValue} 
+            onChange={(e)=> dispatch(searchValueChange(e.target.value)) } 
             />
-            {/* {value && <GrClose onClick={handleClickClear}  className={s.clearIcon} />} */}
-        </div>
-    
+          {searchValue && <GrClose onClick={()=> dispatch(searchValueChange(""))}  className={s.clearIcon} />}
+    </div>
   )
 }
 
