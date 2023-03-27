@@ -3,8 +3,24 @@
   .categories{
     margin-bottom: 20px;
     display: flex;
+    flex-wrap: wrap;
     margin-top: 20px;
 }
+
+@media (max-width: 760px)  {
+  .categories{ 
+      width: 693px;
+     
+}   
+}
+
+@media (max-width: 530px)  {
+  .categories{
+     
+     width: 336px;}
+  
+}
+
 .categories > li {
     /* background-color: #f9f9f9; */
     padding: 13px 30px;

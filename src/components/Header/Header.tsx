@@ -14,8 +14,8 @@ const Header = (props: Props) => {
     <div className={s.header}>
     <div className={s.container}>
         <Link to="products">
-            <div className="header__logo">
-                {/* <img width="38" src={logo} alt="Pizza logo" /> */}
+            <div >
+
                 <div>
                     <h1>Product Store</h1>
                     <p>Смартфоны, ТВ и электроника</p>
