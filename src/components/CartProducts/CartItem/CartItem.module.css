@@ -1,0 +1,95 @@
+
+.cartItem{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr;
+        grid-column-gap: 10px;
+        grid-row-gap: 0px;
+         box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        margin-bottom: 5px;
+        border-radius: 8px;
+       
+
+}
+
+.cartItem:hover{
+   
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.wrapLeftBlock{
+    display: flex;
+    /* border: 1px solid red; */
+    position: relative;
+
+}
+
+.discount{
+    position: absolute;
+    top: 0px;
+    left: -10px;
+    background-color: red;
+    width: 30px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    font-size: 12px;
+    color: white;
+}
+
+.wrapRightBlock{
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 1px solid red; */
+}
+.wrapPlusMinusCount{
+    /* border: 1px solid red; */
+    height: 35px;
+    display: flex;
+    align-items: center;
+}
+
+.count{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   width: 30px;
+   height: 30px;
+ 
+    /* margin: 0 5px; */
+}
+.iconCount{
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 50%;
+    border: 1px solid blue;
+    padding: 3px;
+}
+.iconCount:hover{
+    background-color: blue;
+    color: white;
+}
+
+
+.oldPrice{ color: gray;
+font-weight: 600;
+text-decoration: line-through;}
+
+.newPrice{
+    color:red;
+    font-weight: normal;
+    font-size: 22px;
+}
+
+.deleteItem{
+    font-size: 20px;
+    color: gray;
+    cursor: pointer;
+}
+.deleteItem:hover{
+    color:black;
+    transform: scale(1.1);
+}

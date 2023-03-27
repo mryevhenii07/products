@@ -1,10 +1,11 @@
 import React from 'react'
+import CartProducts from '../components/CartProducts/CartProducts';
 
 type Props = {}
 
 const Cart = (props: Props) => {
   return (
-    <div>cart</div>
+    <><CartProducts/></>
   )
 }
 

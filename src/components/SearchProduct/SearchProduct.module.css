@@ -17,12 +17,27 @@
     border-radius: 10px;
     font-size: 18px;
     transition: all 0.15s ease-in-out;
+    
+   
+    outline: none;
 }
-
+@media (max-width: 530px)  {
+    .input{
+        width: 220px;
+        
+  }
+  
+}
 .input:focus {
         width: 350px;
 }
 
+@media (max-width: 530px)  {
+    .input:focus{
+        width: 300px;
+        
+    } 
+  }
 .icon {
     width: 22px;
     height: 22px;

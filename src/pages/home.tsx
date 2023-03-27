@@ -8,8 +8,8 @@ type Props = {}
 const Home = (props: Props) => {
   return (
     <div>
-      <Categories/>
-      <Sort/>
+      {/* <Categories/>
+      <Sort/> */}
         <ListProduct/>
         
     </div>
