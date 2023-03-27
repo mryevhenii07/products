@@ -27,5 +27,21 @@ body{
   margin: 0 auto;
   background-color: rgb(251, 248, 248);
   padding: 0 10px;
+
+ /* border: 1px solid rgb(75, 73, 73); */
 }
 
+
+@media (max-width: 760px)  {
+    .wrapper{ 
+      max-width: 713px;
+     grid-template-columns: repeat(2, 1fr);
+   }   
+}
+
+@media (max-width: 530px)  {
+    .wrapper{
+      max-width: 356px;
+      grid-template-columns: repeat(1, 1fr);}
+    
+}

@@ -1,9 +1,8 @@
 import React from 'react'
 import { Link, useLocation } from 'react-router-dom';
-import {HiOutlineShoppingCart} from 'react-icons/hi';
+import {HiOutlineShoppingCart,HiOutlineUser} from 'react-icons/hi';
 
 import SearchProduct from '../SearchProduct/SearchProduct';
-
 import s from './Header.module.css';
 
 type Props = {}
@@ -21,14 +20,15 @@ const Header = (props: Props) => {
                     <h1>Product Store</h1>
                     <p>Смартфоны, ТВ и электроника</p>
                 </div>
-            </div></Link>
+            </div>
+    </Link>
         <SearchProduct />
-        <Link to="/cart" className={s.headerCart}>
-            {pathname !== "/cart" &&   <Link to="/cart" >
-                    <HiOutlineShoppingCart className={s.icon} />
-<span className={s.totalCount}>1</span>
-            </Link> }
-        </Link>
+        <Link to="/cart" >
+            {pathname !== "/cart" &&   <Link to="/cart" className={s.wrapIcon}>
+            <div className={s.headerCart}><HiOutlineUser className={s.icon}/> </div>     <div className={s.headerCart}><HiOutlineShoppingCart className={s.icon} /><span className={s.totalCount}>1</span></div>   
+            
+        </Link> }
+    </Link>
     </div>
 </div>
 )

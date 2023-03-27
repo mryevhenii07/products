@@ -2,6 +2,18 @@
    background-color: rgb(46, 45, 45);
     padding: 20px 10px; 
 }
+
+/* 
+@media (max-width: 760px)  {
+    .wrapper{ 
+    grid-template-columns: repeat(2, 1fr);
+    border: 1px solid red;}   
+}
+
+@media (max-width: 430px)  {
+    .wrapper{grid-template-columns: repeat(1, 1fr);}
+    
+} */
   
     .container {
       display: flex;
@@ -20,8 +32,9 @@
     padding: 9px;
     /* border-radius: 25px; */
     border-radius: 8px;
-    
+    margin-right: 5px;
   }
+
 
   .totalCount{
     padding: 3px;
@@ -48,21 +61,13 @@
     
   }
 
-  /* .price{
-    color: white;
-    font-size: 18px;
-  }
 
-  .wrapPrice{
-    display: flex;
-    justify-content: center;
-    height: 25px;
-    align-items: center;
-  } */
+.wrapIcon{display: flex;}
 
   .icon{margin-right: 3px;
     color: white;
-    font-size: 28px;
+    font-size: 26px;
   }
+  
 
   

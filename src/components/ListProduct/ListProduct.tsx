@@ -23,8 +23,7 @@ const ListProduct = (props: Props) => {
   
   return (
     <div className={s.wrapper}>
-        {/* {products?.map((product)=> <Skeleton key={product.id} {...product}/>)} */}
-        {/* {products?.map((product)=> <ItemProduct key={product.id} {...product}/>)} */}
+      
    {isLoading ? [...new Array(8)].map((_,index) => <Skeleton key={index}/>) : products?.map((product)=> <ItemProduct key={product.id} {...product}/>)}
     </div>
   )
