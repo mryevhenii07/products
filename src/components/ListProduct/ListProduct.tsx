@@ -1,5 +1,6 @@
 
 import { useEffect, useState,FC } from 'react'
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { MyProduct } from '../../types/interface';
 import Categories from '../Categories/Categories';
@@ -12,11 +13,12 @@ import {selectProduct} from '../../store/productsSlice/selected';
 import {useAppDispatch} from '../../hooks/hooks';
 import {useAppSelector} from '../../hooks/hooks';
 import {setProductsList} from '../../store/productsSlice/productSlice';
+import HText from '../../helpers/HText/HText';
+
 
 
 const ListProduct:FC = () => {
     const [isLoading,setIsLoading]=useState(true)
-
     const dispatch = useAppDispatch()
     const productsList = useAppSelector(selectProduct)
     const categoryId = useAppSelector(selectId)
@@ -38,7 +40,11 @@ const ListProduct:FC = () => {
   return (
     <>
       <Categories />
-      <Sort/>
+      {/* <Sort/> */}
+      
+      <Link className={s.linkProduct} to="/createProduct"><button  className={s.button}> 
+        Create Products
+         </button></Link>
         <div className={s.wrapper}>
   {isLoading ? [...new Array(6)].map((_,index) => <Skeleton key={index}/>) : productsList?.map((product:MyProduct)=> <ItemProduct key={product.id} {...product}/>)}
         </div>

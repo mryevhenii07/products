@@ -22,7 +22,9 @@ return (
         <SearchProduct />
         <Link to="/cart" >
             {pathname !== "/cart" &&   <Link to="/cart" className={s.wrapIcon}>
-            <div className={s.headerCart}><HiOutlineUser className={s.icon}/> </div>     <div className={s.headerCart}><HiOutlineShoppingCart className={s.icon} /><span className={s.totalCount}>1</span></div>   
+            <div className={s.headerCart}><HiOutlineUser className={s.icon}/>
+             </div>  <div className={s.headerCart}><HiOutlineShoppingCart className={s.icon} />
+             <span className={s.totalCount}>1</span></div>   
             
         </Link> }
     </Link>

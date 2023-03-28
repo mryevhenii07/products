@@ -14,9 +14,8 @@ const SearchProduct:FC = () => {
 
     const onClickClear =()=>{
       dispatch(setSearchChange(""));
-      inputRef.current?.focus()
       setValue('');
-  
+      inputRef.current?.focus()
     }
 
     const updateSearchValue = useCallback(
@@ -37,7 +36,7 @@ const SearchProduct:FC = () => {
             <input
                   ref={inputRef}            
                   className={s.input} 
-                  placeholder='Пошук товару'
+                  placeholder='Product search...'
                   value={value} 
                   onChange={handleChangeInput } 
             />

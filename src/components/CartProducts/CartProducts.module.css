@@ -53,16 +53,167 @@ color: rgb(172, 172, 172);
     background-color: rgb(2, 2, 146);
 }
 
-.cartBackBtn{
-    color: black;
-    font-weight: bold;
-    padding: 10px 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid white;
+
+.cartBackBtn {
+  align-items: center;
+  background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  display: flex;
+  font-family: Phantomsans, sans-serif;
+  font-size: 20px;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 140px;
+  padding: 3px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
 }
-.cartBackBtn:hover{
-    border-radius: 25px;
-    border: 1px solid blue;
+
+.cartBackBtn:active,
+.cartBackBtn:hover {
+  outline: 0;
+}
+
+.cartBackBtn span {
+  background-color: rgb(5, 6, 45);
+  padding: 16px 24px;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+}
+
+.cartBackBtn:hover span {
+  background: none;
+}
+
+@media (min-width: 768px) {
+  .cartBackBtn {
+    font-size: 14px;
+    min-width: 196px;
+  }
+}
+
+
+/* <!-- HTML !-->
+<button class="button-82-pushable" role="button">
+  <span class="button-82-shadow"></span>
+  <span class="button-82-edge"></span>
+  <span class="button-82-front text">
+    Button 82
+  </span>
+</button> */
+
+/* CSS */
+.cartPayNowP {
+  position: relative;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
+  transition: filter 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.cartPayNowS {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: hsl(0deg 0% 0% / 0.25);
+  will-change: transform;
+  transform: translateY(2px);
+  transition:
+    transform
+    600ms
+    cubic-bezier(.3, .7, .4, 1);
+}
+
+.cartPayNowE {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: linear-gradient(
+    to left,
+    hsl(340deg 100% 16%) 0%,
+    hsl(340deg 100% 32%) 8%,
+    hsl(340deg 100% 32%) 92%,
+    hsl(340deg 100% 16%) 100%
+  );
+}
+
+.cartPayNowF {
+  display: block;
+  position: relative;
+  padding: 12px 27px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  color: white;
+  background: blue;
+  /* background: hsl(345deg 100% 47%); */
+  will-change: transform;
+  transform: translateY(-4px);
+  transition:
+    transform
+    600ms
+    cubic-bezier(.3, .7, .4, 1);
+}
+
+@media (min-width: 768px) {
+  .button-82-front {
+    font-size: 1.25rem;
+    padding: 12px 42px;
+  }
+}
+
+.cartPayNowP:hover {
+  filter: brightness(110%);
+  -webkit-filter: brightness(110%);
+}
+
+.cartPayNowP:hover .cartPayNowF {
+  transform: translateY(-6px);
+  transition:
+    transform
+    250ms
+    cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.cartPayNowP:active .cartPayNowF {
+  transform: translateY(-2px);
+  transition: transform 34ms;
+}
+
+.cartPayNowP:hover .cartPayNowS {
+  transform: translateY(4px);
+  transition:
+    transform
+    250ms
+    cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.cartPayNowP:active .cartPayNowS {
+  transform: translateY(1px);
+  transition: transform 34ms;
+}
+
+.cartPayNowP:focus:not(:focus-visible) {
+  outline: none;
 }

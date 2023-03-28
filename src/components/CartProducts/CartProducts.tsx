@@ -25,12 +25,12 @@ const Cart:React.FC = () => {
             <div className={s.cartTop}>
                 <h2 >
                     <MdOutlineShoppingCart/>
-                    Кошик
+                    Basket
                 </h2>
                         <div  className={s.cartClear}>
                         {/* <div onClick={handleClearItem} className="cart__clear"> */}
                         <MdDeleteOutline size={18}/>
-                            <span >Очистити корзину</span>
+                            <span >Clear the basket</span>
                         </div>
                     </div>
                     <div className="content__items">
@@ -43,17 +43,24 @@ const Cart:React.FC = () => {
                     <div className="cart__bottom">
                         <div className={s.cartBottomDetails}>
                             <div>
-                                Всього піц: <b>1 шт.</b>{' '}
+                                Total Products: <b>1 шт.</b>{' '}
                                 {/* Всього піц: <b>{totalCount} шт.</b>{' '} */}
                             </div>
                             <div>
-                                Сума замовлення: <b>1000 грн</b>{' '}
+                            Order amount: <b>1000 грн</b>{' '}
                                 {/* Сума замовлення: <b>{totalPrice} грн</b>{' '} */}
                             </div>
                         </div>
                         <div className={s.cartWrapBottomBtn}>
-                                <Link to="/products" className={s.cartBackBtn}>Повернутися назад</Link>
-                            <div className={s.cartPayNow}>Оплатити зараз</div>
+                                <Link to="/products" className={s.cartBackBtn}> <span>Повернутися назад</span> </Link>
+
+<button className={s.cartPayNowP}>
+    <span  className={s.cartPayNowS}></span>
+    <span  className={s.cartPayNowE}></span>
+    <span  className={`${s.cartPayNowF} ${s.text}`}>
+    Pay Now
+    </span>
+</button>
                         </div>
                     </div>
                 </div>
