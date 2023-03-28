@@ -40,7 +40,7 @@
 
 }
 
-.categories > li {
+/* .categories > button {
 height: 55px;
   line-height: 55px;
   text-align: center;
@@ -52,12 +52,12 @@ height: 55px;
   cursor: pointer;
   transition: background-color 0.1s ease-in-out;
   
-}
-.categories > li::first-letter{
+} */
+.categories > button::first-letter{
 text-transform: uppercase;
 }
 
-.categories > li:hover {
+.categories > button:hover {
   background-color: gray;
 }
 
@@ -65,43 +65,69 @@ text-transform: uppercase;
  /* border-bottom: 4px solid blue; */
  border-bottom: 4px solid blue;
  box-shadow: 0px 0px 14px -7px #f09819;
- background-image: linear-gradient(45deg, #FF512F 0%, #F09819  51%, #FF512F  100%);
+ background-image: linear-gradient(45deg, #753d32 0%, #af7f3a  51%, #b6351b  100%);
  color:#fff
 }
 
 
 
-/* <!-- HTML !-->
-<button class="button-87" role="button">Button 87</button> */
 
 /* CSS */
-.button-87 {
-  margin: 10px;
-  padding: 15px 30px;
-  text-align: center;
-  text-transform: uppercase;
-  transition: 0.5s;
-  background-size: 200% auto;
-  color: white;
-  border-radius: 10px;
-  display: block;
-  border: 0px;
-  font-weight: 700;
-  box-shadow: 0px 0px 14px -7px #f09819;
-  background-image: linear-gradient(45deg, #FF512F 0%, #F09819  51%, #FF512F  100%);
+.categories > button {
+  appearance: none;
+  background-color: #FFFFFF;
+  border-width: 0;
+  box-sizing: border-box;
+  /* color: #000000; */
   cursor: pointer;
+  display: inline-block;
+
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 1em;
+  margin: 0;
+  opacity: 1;
+  outline: 0;
+  padding: 1.5em 2.2em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-rendering: geometricprecision;
+  text-transform: uppercase;
+  transition: opacity 300ms cubic-bezier(.694, 0, 0.335, 1),background-color 100ms cubic-bezier(.694, 0, 0.335, 1),color 100ms cubic-bezier(.694, 0, 0.335, 1);
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+  vertical-align: baseline;
+  white-space: nowrap;
 }
 
-.button-87:hover {
-  background-position: right center;
-  /* change the direction of the change here */
-  color: #fff;
-  text-decoration: none;
+.categories > button:before {
+  animation: opacityFallbackOut .8s step-end forwards;
+  backface-visibility: hidden;
+  background-color: #EBEBEB;
+  clip-path: polygon(-1% 0, 0 0, -25% 100%, -1% 100%);
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: translateZ(0);
+  transition: clip-path .9s cubic-bezier(.165, 0.84, 0.44, 1), -webkit-clip-path .5s cubic-bezier(.165, 0.84, 0.44, 1);
+  width: 100%;
 }
 
-.button-87:active {
-  transform: scale(0.95);
+.categories > button:hover:before {
+  animation: opacityFallbackIn 0s step-start forwards;
+  clip-path: polygon(0 0, 101% 0, 101% 101%, 0 101%);
+}
+
+.categories > button:after {
+  background-color: #FFFFFF;
+}
+
+.categories > button span {
+  z-index: 1;
+  position: relative;
 }

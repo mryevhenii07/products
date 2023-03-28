@@ -1,7 +1,7 @@
 .cart{
     margin: 0 auto;
     width: 750px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     padding: 50px 10px 10px;
 }
 
@@ -55,6 +55,7 @@ color: rgb(172, 172, 172);
 
 
 .cartBackBtn {
+
   align-items: center;
   background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
   border: 0;
@@ -84,6 +85,9 @@ color: rgb(172, 172, 172);
 }
 
 .cartBackBtn span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: rgb(5, 6, 45);
   padding: 16px 24px;
   border-radius: 6px;
@@ -103,17 +107,6 @@ color: rgb(172, 172, 172);
   }
 }
 
-
-/* <!-- HTML !-->
-<button class="button-82-pushable" role="button">
-  <span class="button-82-shadow"></span>
-  <span class="button-82-edge"></span>
-  <span class="button-82-front text">
-    Button 82
-  </span>
-</button> */
-
-/* CSS */
 .cartPayNowP {
   position: relative;
   border: none;

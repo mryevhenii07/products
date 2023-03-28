@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import {FC} from 'react';
 import { Routes,Route,useLocation } from 'react-router-dom';
 
 import './App.css';
@@ -8,14 +8,12 @@ import Cart from './pages/cart';
 import NotFound from './pages/notFound';
 import CreateProduct from './pages/createProduct';
 
-function App() {
- const {pathname} =useLocation()
- console.log(pathname);
- 
-  
+const  App:FC = () => {
+const {pathname} =useLocation()
+
   return (
     <div className='wrapper'>
-     {pathname !== "/createProduct" ? <Header /> : ""} 
+      {pathname !== "/createProduct" ? <Header /> : ""} 
       <Routes>
         <Route path='/products' element={<Home />}/>
         <Route path='/cart' element={<Cart/>}/>

@@ -1,115 +1,56 @@
-import React from 'react'
-import {AiOutlinePlus,AiOutlineMinus,AiOutlineClose} from 'react-icons/ai';
-import Img from './../../../assets/images/bi.jpg';
+import React from 'react';
+import { AiOutlinePlus, AiOutlineMinus, AiOutlineClose } from 'react-icons/ai';
+
+import { useAppDispatch, useAppSelector } from '../../../hooks/hooks';
+import { MyProduct } from '../../../types/interface';
+import { addItem, removeItem, minusItem } from '../../../store/cartSlice/cartSlice';
 import s from './CartItem.module.css';
 
-const CartItem:React.FC = () => {
+interface Props extends MyProduct {}
 
-return (
-<div className={s.cartItem}>
-   <div className={s.wrapLeftBlock}>
-<img src={Img} alt="img" width={100}/>
-<p>sddsdsdd dsssss dsssssssssss sdds</p>
-<div className={s.discount}>4%</div>
-   </div>
+const CartItem: React.FC<Props> = ({ brand, title, price, thumbnail, discountPercentage, id }) => {
+  const dispatch = useAppDispatch();
+  const cartItem = useAppSelector((state) => state.cart.items.find((obj: any) => obj.id === id));
+  const addedCount = cartItem ? cartItem.count : 0;
+  const discount = Math.floor((price / 100) * discountPercentage + price);
 
-   <div className={s.wrapRightBlock}>
-   
-   <div className={s.wrapPlusMinusCount}>
-    <AiOutlinePlus className={s.iconCount}/>
-    <span className={s.count}>1</span>
-    <AiOutlineMinus  className={s.iconCount}/>
-   </div>
-   <div>
-    <div className={s.oldPrice}>22222</div>
-    <div className={s.newPrice}>12444</div>
-   </div>
-   <AiOutlineClose className={s.deleteItem}/>
+  const onClickPlus = () => {
+    dispatch(addItem({ id }));
+  };
+  const onClickMinus = () => {
+    dispatch(minusItem(id));
+  };
+  return (
+    <div className={s.cartItem}>
+      <div className={s.wrapLeftBlock}>
+        <img src={thumbnail} alt="img" width={80} height={80} />
+        <div className={s.brand}>
+          <p>{brand}</p>
+          <span>{title}</span>
+        </div>
+        {discount === price ? (
+          ''
+        ) : (
+          <div className={s.discount}>{discountPercentage.toFixed()}%</div>
+        )}
+      </div>
 
-   </div>
+      <div className={s.wrapRightBlock}>
+        <div className={s.wrapPlusMinusCount}>
+          <AiOutlineMinus className={s.iconCount} onClick={onClickMinus} />
 
+          <span className={s.count}>{addedCount}</span>
+          <AiOutlinePlus className={s.iconCount} onClick={onClickPlus} />
+        </div>
+        <div>
+          {discount === price ? '' : <div className={s.oldPrice}>{discount * addedCount}$</div>}
+
+          <div className={s.newPrice}>{price * addedCount}$</div>
+        </div>
+        <AiOutlineClose onClick={() => dispatch(removeItem(id))} className={s.deleteItem} />
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default CartItem
-// import React from 'react'
-// // import {  useDispatch } from 'react-redux'
-
-// // import { addItem,decrementItem,removeItem} from 'redux/slices/cartSlice';
-// // import {useAppDispatch} from '../../redux/store';
-
-// // interface CartItemProps  {
-// //     id: string;
-// //     title: string;
-// //     type: string;
-// //     size: number;
-// //     price: number;
-// //     count: number;
-// //     imageUrl: string;
-// //   };
-
-// const CartItem:React.FC = () => {
-// // const dispatch = useAppDispatch()
-
-// // const handelClickPlus = ()=>{
-// //     dispatch(addItem({id}))
-// // }
-
-// // const handelClickMinus = ()=>{
-// //     dispatch(decrementItem(id))
-// // }
-
-// // const handleRemovePizza =()=>{
-// //     if(window.confirm("Ви впевнені, що хочете видалити?")){
-// //         dispatch(removeItem(id)) 
-// //     }
-// // }
-
-// return (
-// <div className="content__items">
-//     <div className="cart__item">
-//         <div className="cart__item-img">
-//     {/* <img className="pizza-block__image" src={imageUrl} alt="Pizza"/> */}
-//         </div>
-//     <div className="cart__item-info">
-//     <h3>Apple</h3>
-//         <p>23 см.</p>
-//     {/* <h3>{title}</h3>
-//         <p>{type}, {size} см.</p> */}
-//             </div>
-//         <div className="cart__item-count">
-//                 <button   className="button button--outline button--circle cart__item-count-minus">
-//                 {/* <button onClick={handelClickMinus}  className="button button--outline button--circle cart__item-count-minus"> */}
-//             <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-//                 <path d="M5.92001 3.84V5.76V8.64C5.92001 9.17016 5.49017 9.6 4.96001 9.6C4.42985 9.6 4.00001 9.17016 4.00001 8.64L4 5.76L4.00001 3.84V0.96C4.00001 0.42984 4.42985 0 4.96001 0C5.49017 0 5.92001 0.42984 5.92001 0.96V3.84Z" fill="#EB5A1E"></path>
-//                 <path d="M5.75998 5.92001L3.83998 5.92001L0.959977 5.92001C0.429817 5.92001 -2.29533e-05 5.49017 -2.29301e-05 4.96001C-2.2907e-05 4.42985 0.429817 4.00001 0.959977 4.00001L3.83998 4L5.75998 4.00001L8.63998 4.00001C9.17014 4.00001 9.59998 4.42985 9.59998 4.96001C9.59998 5.49017 9.17014 5.92001 8.63998 5.92001L5.75998 5.92001Z" fill="#EB5A1E"></path>
-//             </svg>
-//                 </button>
-//                 <b>11</b>
-//                 <button  className="button button--outline button--circle cart__item-count-plus">
-//                 {/* <button onClick={handelClickPlus} className="button button--outline button--circle cart__item-count-plus"> */}
-//             <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-//                 <path d="M5.92001 3.84V5.76V8.64C5.92001 9.17016 5.49017 9.6 4.96001 9.6C4.42985 9.6 4.00001 9.17016 4.00001 8.64L4 5.76L4.00001 3.84V0.96C4.00001 0.42984 4.42985 0 4.96001 0C5.49017 0 5.92001 0.42984 5.92001 0.96V3.84Z" fill="#EB5A1E"></path>
-//                 <path d="M5.75998 5.92001L3.83998 5.92001L0.959977 5.92001C0.429817 5.92001 -2.29533e-05 5.49017 -2.29301e-05 4.96001C-2.2907e-05 4.42985 0.429817 4.00001 0.959977 4.00001L3.83998 4L5.75998 4.00001L8.63998 4.00001C9.17014 4.00001 9.59998 4.42985 9.59998 4.96001C9.59998 5.49017 9.17014 5.92001 8.63998 5.92001L5.75998 5.92001Z" fill="#EB5A1E"></path>
-//             </svg>
-//                 </button>
-//                     </div>
-//                         <div className="cart__item-price">
-//                     <b>count  price грн</b>
-//                 </div>
-//             <div className="cart__item-remove">
-//                 <button  className="button button--outline button--circle">
-//                 {/* <button onClick={handleRemovePizza} className="button button--outline button--circle"> */}
-//                     <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-//                         <path d="M5.92001 3.84V5.76V8.64C5.92001 9.17016 5.49017 9.6 4.96001 9.6C4.42985 9.6 4.00001 9.17016 4.00001 8.64L4 5.76L4.00001 3.84V0.96C4.00001 0.42984 4.42985 0 4.96001 0C5.49017 0 5.92001 0.42984 5.92001 0.96V3.84Z" fill="#EB5A1E"></path>
-//                         <path d="M5.75998 5.92001L3.83998 5.92001L0.959977 5.92001C0.429817 5.92001 -2.29533e-05 5.49017 -2.29301e-05 4.96001C-2.2907e-05 4.42985 0.429817 4.00001 0.959977 4.00001L3.83998 4L5.75998 4.00001L8.63998 4.00001C9.17014 4.00001 9.59998 4.42985 9.59998 4.96001C9.59998 5.49017 9.17014 5.92001 8.63998 5.92001L5.75998 5.92001Z" fill="#EB5A1E"></path>
-//                     </svg>
-//                 </button>
-//             </div>
-//         </div>
-//     </div>
-//   )
-// }
-
-// export default CartItem
+export default CartItem;
