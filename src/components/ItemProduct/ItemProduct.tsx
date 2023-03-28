@@ -13,6 +13,7 @@ interface Props extends MyProduct {
 
 const ItemProduct:FC<Props> = ({brand,price,rating,stock,title,thumbnail,id,description,discountPercentage}) => {
     const [productCount,setProductCount]= useState(0)
+    
     const discount = Math.floor(((price / 100 )* discountPercentage) + price) 
     const discountFixed = Number(discount.toFixed()).toLocaleString() 
     const priceLocal = price.toLocaleString()

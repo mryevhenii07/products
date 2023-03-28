@@ -10,25 +10,25 @@ searchValue:string
 
 const initialState: FilterState = {
     categoriesId: "smartphones",
-    searchValue: "",
-    categories:[]
+    categories:[],
+    searchValue: ""
 }
 
 export const filterSlice = createSlice({
     name: 'filter',
     initialState,
     reducers: {
-categoryList:(state,action:PayloadAction)=>{
+setCategoryList:(state,action:PayloadAction)=>{
     state.categories = action.payload
 },
-categoriesId:(state,action:PayloadAction<string>)=>{
+setCategoriesId:(state,action:PayloadAction<string>)=>{
     state.categoriesId = action.payload
 },
-searchValueChange:(state,action:PayloadAction<string>)=>{
+setSearchChange:(state,action:PayloadAction<string>)=>{
     state.searchValue = action.payload
 }
     },
 })
 
-export const { categoryList,categoriesId,searchValueChange } = filterSlice.actions
+export const { setCategoryList,setCategoriesId,setSearchChange } = filterSlice.actions
 export default filterSlice.reducer
