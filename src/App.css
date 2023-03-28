@@ -1,13 +1,3 @@
-/* .wrapper{
-  background-image: url("/src//assets//images//backgroundImg.jpg");
-  background-size:contain;
-  background-repeat: repeat; */
-  /* background-position-x: center;
-    background-position-y: center; */
-  /* color: white; */
-  /* height: 100vh;
-  width: 100%; */
-/* } */
 
 body{
   background-color: rgb(241, 236, 236);
@@ -19,7 +9,6 @@ body{
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
-  
 }
 
 .wrapper{
@@ -27,16 +16,14 @@ body{
   margin: 0 auto;
   background-color: rgb(251, 248, 248);
   padding: 0 10px;
-
- /* border: 1px solid rgb(75, 73, 73); */
 }
 
 
 @media (max-width: 760px)  {
     .wrapper{ 
       max-width: 713px;
-     grid-template-columns: repeat(2, 1fr);
-   }   
+      grid-template-columns: repeat(2, 1fr);
+    }   
 }
 
 @media (max-width: 530px)  {

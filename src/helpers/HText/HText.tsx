@@ -1,13 +1,11 @@
-import React from 'react'
+import React from 'react';
 import s from './HText.module.css';
 type Props = {
-    children:React.ReactNode
-}
+  children: React.ReactNode;
+};
 
-const HText = ({children}: Props) => {
-  return (
-    <button className={s.button}>{children}</button>
-  )
-}
+const HText = ({ children }: Props) => {
+  return <h1 className={s.button}>{children}</h1>;
+};
 
-export default HText
+export default HText;

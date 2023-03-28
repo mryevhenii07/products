@@ -7,6 +7,7 @@ import CartItem from './CartItem/CartItem';
 import { useAppSelector, useAppDispatch } from '../../hooks/hooks';
 import { selectCart, selectTotalPrice } from '../../store/cartSlice/selected';
 import { clearItems } from '../../store/cartSlice/cartSlice';
+import CartEmpty from '../CartEmpty/CartEmpty';
 
 const Cart: React.FC = () => {
   const totalPrice = useAppSelector(selectTotalPrice);
@@ -22,9 +23,9 @@ const Cart: React.FC = () => {
     }
   };
 
-  // if(!totalPrice){
-  //     return  <CartEmpty/>
-  // }
+  if (!totalCounts) {
+    return <CartEmpty />;
+  }
   return (
     <div className={s.cart}>
       <div className={s.cartTop}>
