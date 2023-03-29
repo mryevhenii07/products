@@ -35,7 +35,7 @@ const ListProduct: FC = () => {
   }, [categoryId, dispatch, search]);
 
   return (
-    <>
+    <div className={s.wrapListProduct}>
       <Categories />
       <Link className={s.linkProduct} to="/createProduct">
         <button className={s.button}>Create Products</button>
@@ -47,7 +47,7 @@ const ListProduct: FC = () => {
               <ItemProduct key={product.id} {...product} />
             ))}
       </div>
-    </>
+    </div>
   );
 };
 

@@ -1,11 +1,17 @@
-import React from 'react'
+import React from 'react';
 
-type Props = {}
+import FormCreate from '../components/components/Form/Form';
+import NewProducts from '../components/components/NewProducts/NewProducts';
+
+type Props = {};
 
 const CreateProduct = (props: Props) => {
   return (
-    <div>createProduct</div>
-  )
-}
+    <div className="wrapForm">
+      <NewProducts />
+      <FormCreate />
+    </div>
+  );
+};
 
-export default CreateProduct
+export default CreateProduct;

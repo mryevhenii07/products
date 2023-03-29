@@ -4,9 +4,12 @@ grid-template-columns: repeat(3, 1fr);
 grid-template-rows: repeat(2, 1fr);
 grid-column-gap: 20px;
 grid-row-gap: 20px;
+background-color: #e4e1e1;
+
 
 
 }
+.wrapListProduct{background-color: #e4e1e1;}
 @media (max-width: 760px)  {
     .wrapper{ 
         max-width: 693px;

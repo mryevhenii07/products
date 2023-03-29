@@ -4,6 +4,7 @@
     /* margin-top: 50px; */
     border-radius: 10px;
     overflow: hidden;
+    
  
 }
 .wrapper:hover{box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;}
@@ -92,11 +93,12 @@ color: green;
     display: block;
     display: -webkit-box;
     max-width: 400px;
-    font-size:16px;
+    font-size:18px;
     -webkit-line-clamp: 2; /* количество строк */
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+    height: 44px;
 }
 
 
@@ -110,7 +112,7 @@ color: green;
     display: block;
     display: -webkit-box;
     max-width: 400px;
-    font-size:16px;
+    font-size:18px;
     -webkit-line-clamp: 1; /* количество строк */
     -webkit-box-orient: vertical;
     overflow: hidden;

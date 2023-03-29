@@ -1,10 +1,12 @@
 .categories{
-  margin-bottom: 20px;
+  padding:20px  10px 10px 10px;
+  padding-bottom: 10px;
   display: flex;
-  margin-top: 20px;
+  padding-top: ;
   width: 100%;
   overflow: scroll;
   overflow-y:hidden;
+  background-color: rgb(232, 224, 224);
 }
 
 .categories::-webkit-scrollbar {
@@ -74,14 +76,13 @@ text-transform: uppercase;
 
 /* CSS */
 .categories > button {
+  border-radius: 10px;
   appearance: none;
   background-color: #FFFFFF;
   border-width: 0;
   box-sizing: border-box;
-  /* color: #000000; */
   cursor: pointer;
   display: inline-block;
-
   font-size: 14px;
   font-weight: 600;
   letter-spacing: 0;
@@ -104,9 +105,12 @@ text-transform: uppercase;
 }
 
 .categories > button:before {
+  border-radius: 10px;
+
   animation: opacityFallbackOut .8s step-end forwards;
   backface-visibility: hidden;
-  background-color: #EBEBEB;
+  /* background-color: #EBEBEB; */
+  background-color: blue;
   clip-path: polygon(-1% 0, 0 0, -25% 100%, -1% 100%);
   content: "";
   height: 100%;

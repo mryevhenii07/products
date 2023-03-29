@@ -10,3 +10,10 @@ export interface MyProduct {
   title: string;
   thumbnail: string;
 }
+export default interface MyFormValues {
+  name: string;
+  author: string;
+  yearOfPublication: string;
+  rating: string;
+  id: number;
+}

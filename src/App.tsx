@@ -13,13 +13,15 @@ const App: FC = () => {
 
   return (
     <div className="wrapper">
-      {pathname !== '/createProduct' ? <Header /> : ''}
-      <Routes>
-        <Route path="/products" element={<Home />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/createProduct" element={<CreateProduct />} />
-        <Route path="/*" element={<NotFound />} />
-      </Routes>
+      <div className="container">
+        {pathname !== '/createProduct' ? <Header /> : ''}
+        <Routes>
+          <Route path="/products" element={<Home />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/createProduct" element={<CreateProduct />} />
+          <Route path="/*" element={<NotFound />} />
+        </Routes>
+      </div>
     </div>
   );
 };

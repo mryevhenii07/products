@@ -1,8 +1,9 @@
-.cartEmpty{
+.cartEmpty{padding: 0 0 20px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    background-color: #fff;
 }
 .cartEmpty p {
     margin-bottom: 15px;
@@ -10,6 +11,7 @@
 
 
 .button {
+
   align-items: center;
   background-color: initial;
   background-image: linear-gradient(#464d55, #25292e);
@@ -54,8 +56,8 @@
   box-shadow: rgba(0, 0, 0, .5) 0 0 0 3px;
 }
 
-@media (max-width: 420px) {
-  .button {
-    height: 48px;
-  }
+.img{width: 500px;}
+
+@media (max-width: 530px) {
+  .img{width: 300px;}
 }

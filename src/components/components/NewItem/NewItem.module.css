@@ -1,0 +1,40 @@
+.list{
+    display: grid;
+    grid-template-columns: 0.8fr 1fr 0.3fr 0.8fr 0.3fr;
+    
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(242, 238, 238);
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+
+
+.list:hover{
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
+.list > div {
+    border-right: 1px solid rgb(170, 166, 166);
+   
+    padding: 5px;
+    display: block;
+    display: -webkit-box;
+    /* max-width: 400px; */
+    font-size:16px;
+    -webkit-line-clamp: 2; /* количество строк */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    
+}
+
+
+
+.icon{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}

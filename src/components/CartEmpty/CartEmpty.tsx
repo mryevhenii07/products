@@ -17,7 +17,7 @@ const CartEmpty: React.FC = () => {
           <br />
           To order a product, go to the main page.
         </p>
-        <img src={emptyImg} alt="Empty cart" />
+        <img className={s.img} src={emptyImg} alt="Empty cart" />
         <Link to="/products" className="button button--black">
           <button className={s.button}>Go back!!!</button>
         </Link>
