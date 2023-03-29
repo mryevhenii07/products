@@ -13,7 +13,7 @@ export interface MyProduct {
 export default interface MyFormValues {
   name: string;
   author: string;
-  yearOfPublication: string;
-  rating: string;
+  yearOfPublication?: number;
+  rating?: number;
   id: number;
 }
