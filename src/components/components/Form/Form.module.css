@@ -166,3 +166,9 @@ margin-bottom: 10px;
   border: none;
   outline: none;
 }
+.error{
+  color:red;
+  font-size: 12px;
+  margin-left: 5px;
+  margin-top: 2px;
+}

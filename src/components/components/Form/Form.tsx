@@ -14,8 +14,10 @@ const validationSchema = yup.object().shape({
   yearOfPublication: yup
     .number()
     .required('Year is required')
-    .min(1900, 'Year must be greater than or equal to 1900')
+    .min(1900, 'Year must  to 1900')
+    // .min(1900, 'Year must be greater than or equal to 1900')
     .max(new Date().getFullYear(), 'Year must be less than or equal to current year'),
+  // .max(new Date().getFullYear(), 'Year must be less than or equal to current year'),
   rating: yup
     .number()
     .required('Rating is required')
@@ -47,41 +49,34 @@ const FormCreate: React.FC = () => {
             <label className={s.label}>
               <span>Name</span>
               <Field id="Name" name="name" placeholder="Enter name..." />
-              {errors.name && touched.name ? <div>{errors.name}</div> : null}
+              {errors.name && touched.name ? <div className={s.error}>{errors.name}</div> : null}
             </label>
 
             <label className={s.label}>
               <span>Author</span>
               <Field id="Author" name="author" placeholder="Enter author..." />
-              {errors.author && touched.author ? <div>{errors.author}</div> : null}
+              {errors.author && touched.author ? (
+                <div className={s.error}>{errors.author}</div>
+              ) : null}
             </label>
             <label className={s.label}>
-              <span>Year Of Publication</span>
+              <span>Year</span>
               <Field
                 id="YearOfPublication"
                 name="yearOfPublication"
                 placeholder="Enter year of publication..."
               />
               {errors.yearOfPublication && touched.yearOfPublication ? (
-                <div>{errors.yearOfPublication}</div>
+                <div className={s.error}>{errors.yearOfPublication}</div>
               ) : null}
             </label>
             <label className={s.label}>
               <span>Rating</span>
-
               <Field id="Rating" name="rating" placeholder="Enter rating..." />
-              {errors.rating && touched.rating ? <div>{errors.rating}</div> : null}
+              {errors.rating && touched.rating ? (
+                <div className={s.error}>{errors.rating}</div>
+              ) : null}
             </label>
-            {/* <Box
-              component="form"
-              sx={{
-                '& > :not(style)': { m: 1, width: '25ch' },
-              }}
-              noValidate
-              autoComplete="off">
-              <TextField id="standard-basic" label="Standard" variant="standard" />
-            </Box> */}
-
             <button className={s.button} type="submit">
               Submit
             </button>
