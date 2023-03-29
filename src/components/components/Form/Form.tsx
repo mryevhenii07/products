@@ -14,10 +14,8 @@ const validationSchema = yup.object().shape({
   yearOfPublication: yup
     .number()
     .required('Year is required')
-    // .min(1900, 'Year must  to 1900')
     .min(1900, 'Year must be greater than or equal to 1900')
     .max(new Date().getFullYear(), 'Year must be less than or equal to current year'),
-  // .max(new Date().getFullYear(), 'Year must be less than or equal to current year'),
   rating: yup
     .number()
     .required('Rating is required')
