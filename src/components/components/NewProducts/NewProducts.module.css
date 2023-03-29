@@ -1,6 +1,7 @@
 .listProducts{
     width: 550px;
     height: 450px;
+
    
    
     
@@ -8,7 +9,7 @@
 }
 .block{
     width: 565px;
-    height: 400px;
+    height: 415px;
    
     overflow: scroll;
 }
@@ -37,6 +38,8 @@
         border-radius: 10px;
         padding: 15px 0;
         margin-bottom: 15px;
+        background: transparent;
+        backdrop-filter: blur(520px);
     }
 .description > div{
     display: flex;

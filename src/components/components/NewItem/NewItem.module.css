@@ -7,6 +7,8 @@
     background-color: rgb(242, 238, 238);
     margin-bottom: 5px;
     cursor: pointer;
+    background: transparent;
+    backdrop-filter: blur(120px); 
 }
 
 

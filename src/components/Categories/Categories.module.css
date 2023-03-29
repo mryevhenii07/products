@@ -42,19 +42,6 @@
 
 }
 
-/* .categories > button {
-height: 55px;
-  line-height: 55px;
-  text-align: center;
- display: block;
-  padding: 0 20px;
-  border-radius: 5px 5px 0 0;
-  margin-right: 10px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.1s ease-in-out;
-  
-} */
 .categories > button::first-letter{
 text-transform: uppercase;
 }

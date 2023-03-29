@@ -97,4 +97,13 @@ body{
 }
 
 
+@media (max-width:770px){
+  .wrapForm{
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column-reverse;
+   justify-content: center;
+   
+  }
+}
  
