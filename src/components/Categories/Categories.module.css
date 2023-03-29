@@ -2,7 +2,6 @@
   padding:20px  10px 10px 10px;
   padding-bottom: 10px;
   display: flex;
-  padding-top: ;
   width: 100%;
   overflow: scroll;
   overflow-y:hidden;
@@ -10,36 +9,29 @@
 }
 
 .categories::-webkit-scrollbar {
- width: 10px;
- height: 10px;
+  width: 10px;
+  height: 10px;
 }
 
 .categories::-webkit-scrollbar-track {
- -webkit-box-shadow: inset 0 0 6px rgba(196, 34, 34, 0.3); 
- border-radius: 10px;
-
+  -webkit-box-shadow: inset 0 0 6px rgba(196, 34, 34, 0.3); 
+  border-radius: 10px;
 }
 
 .categories::-webkit-scrollbar-thumb {
- border-radius: 3px;
- -webkit-box-shadow: inset 0 0 6px rgb(138, 138, 177); 
- 
+  border-radius: 3px;
+  -webkit-box-shadow: inset 0 0 6px rgb(138, 138, 177); 
 }
-
-
 
 @media (max-width: 760px)  {
 .categories{ 
     width: 693px;
-   
-}   
+  }   
 }
 
 @media (max-width: 530px)  {
 .categories{
-   
-   width: 336px;}
-
+  width: 336px;}
 }
 
 .categories > button::first-letter{
@@ -51,17 +43,12 @@ text-transform: uppercase;
 }
 
 .active {
- /* border-bottom: 4px solid blue; */
- border-bottom: 4px solid blue;
- box-shadow: 0px 0px 14px -7px #f09819;
- background-image: linear-gradient(45deg, #753d32 0%, #af7f3a  51%, #b6351b  100%);
- color:#fff
+  border-bottom: 4px solid blue;
+  box-shadow: 0px 0px 14px -7px #f09819;
+  background-image: linear-gradient(45deg, #753d32 0%, #af7f3a  51%, #b6351b  100%);
+  color:#fff
 }
 
-
-
-
-/* CSS */
 .categories > button {
   border-radius: 10px;
   appearance: none;
@@ -96,7 +83,6 @@ text-transform: uppercase;
 
   animation: opacityFallbackOut .8s step-end forwards;
   backface-visibility: hidden;
-  /* background-color: #EBEBEB; */
   background-color: blue;
   clip-path: polygon(-1% 0, 0 0, -25% 100%, -1% 100%);
   content: "";

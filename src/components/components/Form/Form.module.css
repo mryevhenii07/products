@@ -157,14 +157,15 @@ margin-bottom: 10px;
 
 .label > span {
   margin-left: 5px;
+  margin-bottom: 2px;
   
 }
 .label > input {
   width: 260px;
   height: 45px;
-  /* border: 1px solid red; */
+font-size: 16px;
   border-radius: 10px;
-  padding:0 5px ;
+  padding:0 10px ;
   border: none;
   outline: none;
 

@@ -5,24 +5,21 @@
         grid-template-rows: 1fr;
         grid-column-gap: 10px;
         grid-row-gap: 0px;
-         box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
         margin-bottom: 5px;
         border-radius: 8px;
-        
-       
-
 }
-.brand{padding-left: 10px;}
+
+.brand{padding-left: 10px;
+}
 
 .cartItem:hover{
-   
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+
 .wrapLeftBlock{
     display: flex;
-    /* border: 1px solid red; */
     position: relative;
-
 }
 
 .discount{
@@ -45,10 +42,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* border: 1px solid red; */
 }
+
 .wrapPlusMinusCount{
-    /* border: 1px solid red; */
     height: 35px;
     display: flex;
     align-items: center;
@@ -58,11 +54,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-   width: 30px;
-   height: 30px;
- 
-    /* margin: 0 5px; */
+    width: 30px;
+    height: 30px;
 }
+
 .iconCount{
     cursor: pointer;
     font-size: 20px;
@@ -70,15 +65,16 @@
     border: 1px solid blue;
     padding: 3px;
 }
+
 .iconCount:hover{
     background-color: blue;
     color: white;
 }
 
-
 .oldPrice{ color: gray;
 font-weight: 600;
-text-decoration: line-through;}
+text-decoration: line-through;
+}
 
 .newPrice{
     color:red;
@@ -91,6 +87,7 @@ text-decoration: line-through;}
     color: gray;
     cursor: pointer;
 }
+
 .deleteItem:hover{
     color:black;
     transform: scale(1.1);

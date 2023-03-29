@@ -1,11 +1,4 @@
-/* .header {
-   background-color: rgb(46, 45, 45);
-    padding: 20px 10px; 
-} */
 
-
-
-  
     .container {
       display: flex;
       align-items: center;
@@ -18,8 +11,6 @@
 @media (max-width: 760px)  {
   .container{ 
       width: 693px;
-     
-     
 }   
 }
 
@@ -27,16 +18,14 @@
   .container{
 width: 336px;
 justify-content: center;
-}
-  
+  }
 }
 
-   .headerCart {
+  .headerCart {
     position: relative;
     display: flex;
     align-items: center;
     padding: 9px;
-    /* border-radius: 25px; */
     border-radius: 8px;
     margin-right: 5px;
   }
@@ -64,16 +53,13 @@ justify-content: center;
   .countTotal{
     color: white;
     font-size: 18px;
-    
   }
 
 
-.wrapIcon{display: flex;}
+.wrapIcon{display: flex;
+}
 
   .icon{margin-right: 3px;
     color: white;
     font-size: 26px;
   }
-  
-
-  
