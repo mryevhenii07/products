@@ -6,6 +6,13 @@
     border-radius: 0 0 10px 10px;
 }
 
+@media (max-width:530px){
+  .cart{
+     width: 356px;
+     padding: 30px 10px 10px;
+  }
+}
+
 .cartTop{
     display: flex;
     justify-content: space-between;

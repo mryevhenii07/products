@@ -10,7 +10,21 @@
         border-radius: 8px;
 }
 
+@media (max-width:530px){
+    .cartItem{
+        width: 336px;
+    }
+}
+
 .brand{padding-left: 10px;
+}
+
+@media (max-width:530px){
+    .brand{
+        padding: 0 5px;
+        width: 80px;
+        font-size: 14px;
+    }
 }
 
 .cartItem:hover{
@@ -44,11 +58,19 @@
     justify-content: space-between;
 }
 
+@media (max-width:530px){
+    .wrapRightBlock{
+        padding: 0 5px;
+    }
+  }
+
 .wrapPlusMinusCount{
     height: 35px;
     display: flex;
     align-items: center;
 }
+
+
 
 .count{
     display: flex;
@@ -57,6 +79,14 @@
     width: 30px;
     height: 30px;
 }
+
+@media (max-width:530px){
+    .count{
+      width: 20px;
+      height: 20px;
+     
+    }
+  }
 
 .iconCount{
     cursor: pointer;
