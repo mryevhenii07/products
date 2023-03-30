@@ -4,11 +4,15 @@ grid-template-columns: repeat(3, 1fr);
 grid-template-rows: repeat(2, 1fr);
 grid-column-gap: 10px;
 grid-row-gap: 10px;
+padding: 0 10px;
+background-color: #e4e1e1;
+
 
 }
 .wrapListProduct{
   background-color: #e4e1e1;
-  padding: 0 10px;
+  /* padding: 0 10px; */
+
 }
 
 @media (max-width: 760px)  {
@@ -21,13 +25,13 @@ grid-row-gap: 10px;
 @media (max-width: 530px)  {
     .wrapper{
         grid-template-columns: repeat(1, 1fr);
-        max-width: 336px;
+        max-width: 380px;
       }
 }
 
 .linkProduct{
     color: black;
-    padding: 5px 15px;
+    padding: 5px 10px;
 }
 
 .button {

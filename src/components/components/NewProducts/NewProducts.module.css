@@ -1,17 +1,28 @@
 .listProducts{
     width: 550px;
-    height: 450px;
+    height: 450px;   
+}
+@media (max-width:770px){
+    .listProducts{
+      margin-top: 30px;
+   
+     
+    }
+  }
 
+@media (max-width:530px){
+    .listProducts{
+        margin-top: 30px;
+        width: 336px;
+        overflow: scroll;
+    }
    
-   
-    
-    
 }
 .block{
     width: 565px;
     height: 415px;
    
-    overflow: scroll;
+    
 }
  .block::-webkit-scrollbar {
     width: 10px;
@@ -32,6 +43,7 @@
    
 
 .description{ 
+    width: 565px;
         display: grid;
         grid-template-columns: 0.8fr 1fr 0.3fr 0.8fr 0.3fr;
         background-color: rgb(189, 185, 185);
@@ -41,6 +53,14 @@
         background: transparent;
         backdrop-filter: blur(520px);
     }
+
+    /* @media (max-width:530px){
+        .listProducts{
+            width: 565px;
+            border: 1px solid red;
+            overflow: scroll;
+        }} */
+
 .description > div{
     display: flex;
     justify-content: center;
