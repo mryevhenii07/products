@@ -1,4 +1,6 @@
 
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
 body{
   
    background-image: url('https://static.pexels.com/photos/414171/pexels-photo-414171.jpeg');
@@ -23,20 +25,13 @@ body{
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
+  font-family: 'Roboto', sans-serif;
 }
 
 .wrapper{
   width: 1070px;
   margin: 0 auto;
-  /* background-color: rgb(251, 248, 248); */
-  
-  
 }
-/* .container{
-
-  padding: 0 10px;
-} */
-
 
 @media (max-width: 760px)  {
     .wrapper{ 
@@ -55,8 +50,8 @@ body{
 
 
 
-.page_404{
-  /* width: 100%; */
+/* .page_404{
+
    padding:40px 0;
     background:#fff; 
 }
@@ -78,7 +73,7 @@ body{
   .four_zero_four_bg h3{
        font-size:80px;
        
-       }
+       } */
        
        /* .link_404{      
   color: #fff!important;

@@ -11,13 +11,13 @@
 
 @media (max-width: 760px)  {
   .container{ 
-      width: 693px;
+      width: 713px;
 }   
 }
 
 @media (max-width: 530px)  {
   .container{
-    max-width: 356px;
+    width: 363px;
 justify-content: center;
 flex-direction: column;
   }

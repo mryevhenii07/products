@@ -130,7 +130,7 @@ section{
 
 
 .label{
-  min-height: 80px;
+  height: 80px;
   display: flex;
   flex-direction: column;
 align-items: start;
@@ -154,8 +154,11 @@ font-size: 16px;
 
 }
 .error{
+  width: 250px;
+  height: 13px;
+  overflow: hidden;
   color:red;
-  font-size: 12px;
+  font-size: 10px;
   margin-left: 5px;
   margin-top: 2px;
 }

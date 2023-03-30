@@ -37,7 +37,6 @@
     .listProductsEmpty{
       margin-top: 30px;
    color:rgb(134, 132, 132)
-     
     }
   }
 
@@ -46,10 +45,8 @@
     .listProductsEmpty{
         margin-top: 30px;
         width: 336px;
-        /* overflow: auto;
-        overflow-y: hidden; */
+        font-size: 24px;
     }
-   
 }
 .block{
     width: 565px;
