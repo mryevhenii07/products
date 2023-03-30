@@ -10,20 +10,26 @@ const NewProducts = (props: Props) => {
   const products = useAppSelector(selectForm);
 
   return (
-    <div className={s.listProducts}>
-      <div className={s.description}>
-        <div>Name</div>
-        <div>Author</div>
-        <div>Years</div>
-        <div>Rating</div>
-        <div>Delete</div>
-      </div>
-      <ul className={s.block}>
-        {products.map((product: any) => (
-          <NewItem key={product.id} {...product} />
-        ))}
-      </ul>
-    </div>
+    <>
+      {products.length > 0 ? (
+        <div className={s.listProducts}>
+          <div className={s.description}>
+            <div>Name</div>
+            <div>Author</div>
+            <div>Years</div>
+            <div>Rating</div>
+            <div>Delete</div>
+          </div>
+          <ul className={s.block}>
+            {products.map((product: any) => (
+              <NewItem key={product.id} {...product} />
+            ))}
+          </ul>
+        </div>
+      ) : (
+        <div className={s.listProductsEmpty}>Add your favorite books</div>
+      )}
+    </>
   );
 };
 
