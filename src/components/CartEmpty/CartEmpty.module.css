@@ -58,5 +58,10 @@
 .img{width: 500px;}
 
 @media (max-width: 530px) {
-  .img{width: 300px;}
+  .img{
+    width: 300px;
+  }
+  .cartEmpty{
+    width: 363px;
+  }
 }

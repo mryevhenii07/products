@@ -58,10 +58,18 @@
 
   .pageFour{
     padding:40px 0;
-    background:#fff; 
+    background:#fff;
+    height: 90vh; 
+}
+
+@media (max-width:530px){
+  .pageFour{
+    width: 363px;
+  }
 }
 
 .pageFour  img{ width:100%;
+  height: 600px;
 }
 
 .fourZeroFourBg{
@@ -80,7 +88,7 @@
         
         }
         
-        .linkFour{      
+.linkFour{      
   color: #fff!important;
   padding: 10px 20px;
   background: #39ac31;
@@ -88,5 +96,6 @@
   display: inline-block;
 }
 
-.contantBoxFour{ margin-top:-50px;
+.contantBoxFour{ 
+  margin-top:-50px;
 }

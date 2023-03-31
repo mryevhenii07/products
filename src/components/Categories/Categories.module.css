@@ -1,5 +1,4 @@
 .categories{
-
   padding:20px  10px 10px 10px;
   padding-bottom: 10px;
   display: flex;
@@ -9,7 +8,6 @@
   background-color: rgb(232, 224, 224);
   margin-left: 10px;
   margin-right: 10px;
-  
 }
 
 .categories::-webkit-scrollbar {
@@ -35,9 +33,7 @@
 
 @media (max-width: 530px)  {
 .categories{
-  width: 343px;
- 
-}
+  width: 343px;}
 }
 
 .categories > button::first-letter{
@@ -86,7 +82,6 @@ text-transform: uppercase;
 
 .categories > button:before {
   border-radius: 10px;
-
   animation: opacityFallbackOut .8s step-end forwards;
   backface-visibility: hidden;
   background-color: blue;

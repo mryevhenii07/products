@@ -11,9 +11,15 @@ const Categories: FC = () => {
   const categoryId = useAppSelector(selectId);
 
   useEffect(() => {
-    axios
-      .get('https://dummyjson.com/products/categories')
-      .then((res) => dispatch(setCategoryList(res.data)));
+    const fetchCategorie = async () => {
+      try {
+        const { data } = await axios.get('https://dummyjson.com/products/categories');
+        dispatch(setCategoryList(data));
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    fetchCategorie();
   }, [dispatch]);
 
   return (
