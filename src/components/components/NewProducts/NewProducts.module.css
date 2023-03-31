@@ -1,6 +1,7 @@
 .listProducts{
     width: 550px;
     height: 450px;   
+    
 }
 
 @media (max-width:770px){
@@ -83,6 +84,8 @@
         margin-bottom: 15px;
         background: transparent;
         backdrop-filter: blur(520px);
+        padding-right: 15px;
+
     }
 
 

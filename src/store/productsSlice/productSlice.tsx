@@ -4,10 +4,13 @@ import axios from 'axios';
 
 export const fetchProducts = createAsyncThunk(
   'product/fetchProductStatus',
-  async ({ search, categoryId }: any) => {
+  async ({ search, categoryId }: any, thunkApi) => {
     const { data } = await axios.get(
       `https://dummyjson.com/products/category/${categoryId}/${search}`,
     );
+
+    console.log(thunkApi);
+
     return data.products;
   },
 );

@@ -9,6 +9,7 @@ import { MyProduct } from '../../types/interface';
 import { useAppDispatch, useAppSelector } from '../../hooks/hooks';
 import { addItem } from '../../store/cartSlice/cartSlice';
 import { selectCart } from '../../store/cartSlice/selected';
+import { Link } from 'react-router-dom';
 
 interface Props extends MyProduct {}
 
@@ -49,9 +50,9 @@ const ItemProduct: FC<Props> = ({
 
   return (
     <div key={id} className={s.wrapper}>
-      <div className={s.wrapImg}>
+      <Link to={`/fullProduct/${id}`} className={s.wrapImg}>
         <img src={thumbnail} alt="img" width="100%" height={200} />
-      </div>
+      </Link>
       <div className={s.wrapInfo}>
         <p className={s.wrapBlandTitle}>
           {brand} {title}

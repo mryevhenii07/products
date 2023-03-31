@@ -1,0 +1,19 @@
+.wrap{
+    width: 1070px;
+    height: 100vh;
+    display: flex;
+    background-color: wheat;
+    border: 1px solid red;
+}
+
+.wrapImg{
+    border: 1px solid green;
+    width: 50%;
+    height: 800px;
+}
+
+.wrapRightBlock{
+    width: 50%;
+    height: 800px;
+    border: 1px solid green;
+}

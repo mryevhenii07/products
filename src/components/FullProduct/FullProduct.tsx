@@ -1,11 +1,33 @@
-import React from 'react'
+import axios from 'axios';
+import React, { useEffect, useState, FC } from 'react';
+import { useParams } from 'react-router-dom';
+import { MyProduct } from '../../types/interface';
+import s from './FullProduct.module.css';
+type Props = {};
 
-type Props = {}
+const FullProduct: FC = () => {
+  const { id } = useParams();
 
-const FullProduct = (props: Props) => {
+  // console.log(id);
+  const [pro, setPro] = useState<MyProduct>();
+  useEffect(() => {
+    async function fetchProdu() {
+      try {
+        const { data } = await axios.get(`https://dummyjson.com/products/${id}`);
+        setPro(data);
+      } catch (error) {}
+    }
+    fetchProdu();
+  }, [id]);
+  console.log(pro);
+
   return (
-    <div>FullProduct</div>
-  )
-}
+    <div className={s.wrap}>
+      <div className={s.wrapImg}>{pro?.brand}</div>
 
-export default FullProduct
+      <div className={s.wrapRightBlock}>assaasas</div>
+    </div>
+  );
+};
+
+export default FullProduct;
