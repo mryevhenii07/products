@@ -2,22 +2,40 @@
     width: 1070px;
     height: 100vh;
     display: flex;
-    background-color: wheat;
-    border: 1px solid red;
+    background-color: #fff;
+    padding: 10px;
+    
 }
 
 .wrapImg{
  
     width: 50%;
-    height: 600px;
-    background-color: #fff;
+    height: 100vh;
+    
 }
 
 .wrapRightBlock{
     width: 50%;
-    height: 800px;
-    border: 1px solid green;
+    /* height: 100vh; */
+    padding-left: 10px;
+   background-color: #fff;
 
+}
+.brand{font-weight: bold;
+font-size: 22px;}
+.title{
+    font-weight: bold;
+    font-size: 16px;
+}
+.ratingWrap{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+.reviews{
+    display: flex;
+    margin-left: 30px;
 }
 
 .wrapRightOne{
@@ -25,6 +43,7 @@
     align-items: center;
     border: 1px solid gray;
     padding: 10px;
+    border-radius: 8px;
 }
 
 
@@ -90,6 +109,8 @@ font-weight: normal;}
     display: flex;
     align-items: center; 
     padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 8px;
 }
 
 .bonusB{
@@ -106,4 +127,48 @@ font-weight: normal;}
 .bonusBPlus{
     font-weight: bold;
     margin-right: 10px;
+}
+
+.wrapRezetka{
+    border: 1px solid gray;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+     margin-top: 20px;
+     border-radius: 8px;
+}
+
+.wrapRezetka span {
+    font-weight: bold;
+   
+}
+
+.descriptionPayWrap{
+    display: flex;
+    border: 1px solid gray;
+    margin-top: 20px;
+    border-radius: 8px;
+    padding: 5px;
+}
+.iconWallet{
+    font-size: 100px;
+    color: gray;
+    display: flex;
+    margin-right: 20px;
+    margin-left: 10px;
+    
+}
+.iconSecurity{
+    font-size: 30px;
+    color: gray;
+    display: flex;
+    margin-right: 20px;
+    margin-left: 10px;
+    
+}
+.descriptionTitle{
+    font-weight: bold;
 }
