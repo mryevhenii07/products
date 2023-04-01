@@ -7,13 +7,103 @@
 }
 
 .wrapImg{
-    border: 1px solid green;
+ 
     width: 50%;
-    height: 800px;
+    height: 600px;
+    background-color: #fff;
 }
 
 .wrapRightBlock{
     width: 50%;
     height: 800px;
     border: 1px solid green;
+
+}
+
+.wrapRightOne{
+    display: flex;
+    align-items: center;
+    border: 1px solid gray;
+    padding: 10px;
+}
+
+
+/* .wrapRightPrice{
+    border: 1px solid red;
+    
+} */
+.priceOne{
+    color:red;
+font-size: 32px;
+font-weight: normal;}
+
+.discount{
+
+    color: gray;
+    font-size: 16px;
+    text-decoration: line-through;
+}
+.haveProduct{
+    color:green
+}
+
+.pay{
+    background-color: green;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.payCredit{
+    cursor: pointer;
+    background-color: blue;
+    padding: 10px 25px;
+    border-radius: 10px;
+    color: white;
+}
+
+.springShopping{
+    height: 40px;
+    width: 100%;
+    background-color: green;
+    color:white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.springShoppingDiscount{
+    color:yellow;
+    display: block;
+    margin-left: 10px;
+}
+
+.bonus{
+    height: 40px;
+    width: 100%;
+    border: 1px solid gray;
+    display: flex;
+    align-items: center; 
+    padding: 10px;
+}
+
+.bonusB{
+    background-color: yellow;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.bonusBPlus{
+    font-weight: bold;
+    margin-right: 10px;
 }

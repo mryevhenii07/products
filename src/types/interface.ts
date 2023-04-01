@@ -9,6 +9,7 @@ export interface MyProduct {
   stock: number;
   title: string;
   thumbnail: string;
+  images?: any;
 }
 export default interface MyFormValues {
   name: string;
